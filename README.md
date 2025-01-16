@@ -1,6 +1,6 @@
 # MinUI Favourites
 
-Tools to manage a Favourites collection in MinUI.
+Tools to manage a Favourites collection in [MinUI](https://github.com/shauninman/MinUI).
 
 ## Description
 
@@ -8,10 +8,11 @@ This project provides a set of tools to manage a MinUI collection named "Favouri
 
 ## Installation
 
-1. Download the latest release from GitHub and extract the zip.
+1. Download the latest [release](https://github.com/ben16w/minui-favourites/releases) from GitHub and extract the zip.
 2. Mount your MinUI SD card.
 3. Copy the .pak directories to the correct device folder in the "/Tools" directory on the SD card.
 4. Unmount your SD Card and insert it into your MinUI Device.
+5. Done!
 
 Note: The device folder is based from the name of your device. For example, if you are using a TrimUI Brick, the folder is "tg3040".
 
@@ -29,6 +30,6 @@ This tool removes your most recently played game from the Favourites collection.
 
 This tool clears your Recently Played list.
 
-### License
+## License
 
 This project is released under the Unlicense. For more information, see the [LICENSE](LICENSE) file.
