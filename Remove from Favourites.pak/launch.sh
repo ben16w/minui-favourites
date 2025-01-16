@@ -8,14 +8,14 @@ RECENTS_PATH="/mnt/SDCARD/.userdata/shared/.minui/recent.txt"
 FAVORITES_PATH="$COLLECTIONS_PATH/1) Favorites.txt"
 
 if [ ! -s "$RECENTS_PATH" ]; then
-  show.elf "$DIR/failed.png" 2
+  show.elf "$DIR/failed.png" 5
   exit 1
 fi
 
 MOST_RECENT_GAME=$(head -n 1 "$RECENTS_PATH" | cut -f1)
 
 if [ ! -s "$FAVORITES_PATH" ]; then
-  show.elf "$DIR/failed.png" 2
+  show.elf "$DIR/failed.png" 5
   exit 1
 fi
 
@@ -24,4 +24,4 @@ if grep -Fxq "$MOST_RECENT_GAME" "$FAVORITES_PATH"; then
   mv "$FAVORITES_PATH.tmp" "$FAVORITES_PATH"
 fi
 
-show.elf "$DIR/success.png" 2
+show.elf "$DIR/success.png" 5
