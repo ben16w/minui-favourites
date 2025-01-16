@@ -17,7 +17,7 @@ jobs:
 
       # Create a ZIP file of the repository excluding certain files
       - name: Create ZIP Package
-        run: zip -r minui-favourites.zip ./* -x ".github" "LICENSE" "README.md"
+        run: zip -r minui-favorites.zip ./* -x ".github" "LICENSE" "README.md"
 
       # Create a Release
       - name: Create GitHub Release
@@ -26,8 +26,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         with:
-          tag_name: ${{ github.run_number }}
-          release_name: "Release for commit ${{ github.sha }}"
+          tag_name: "1.${{ github.run_number }}"
+          release_name: "Release 1.${{ github.run_number }}"
           body: "Automated release for commit ${{ github.sha }}"
           draft: false
           prerelease: false
@@ -39,6 +39,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: minui-favourites.zip
-          asset_name: minui-favourites.zip
+          asset_path: minui-favorites.zip
+          asset_name: minui-favorites.zip
           asset_content_type: application/zip
