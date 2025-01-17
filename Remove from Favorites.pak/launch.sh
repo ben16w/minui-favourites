@@ -24,4 +24,8 @@ if grep -Fxq "$MOST_RECENT_GAME" "$FAVORITES_PATH"; then
   mv "$FAVORITES_PATH.tmp" "$FAVORITES_PATH"
 fi
 
+if [ ! -s "$FAVORITES_PATH" ]; then
+  rm -f "$FAVORITES_PATH"
+fi
+
 show.elf "$DIR/success.png" 5
